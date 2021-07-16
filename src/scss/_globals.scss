@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $default-font-stack;
+}
+
+body {
+  background: $body-color;
+  color: $secondary-color;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: $container-width;
+  margin: auto;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $container-width;
+  margin: auto;
+}
+
+h1,
+h2,
+h3,
+p {
+  line-height: 2rem;
+}
+
+a {
+  text-decoration: none;
+}
