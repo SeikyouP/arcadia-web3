@@ -84,18 +84,18 @@ header,
       border-top: 4px solid $secondary-color;
     }
 
-    &:last-child {
-      border: 4px solid #f1f0f3;
-      padding: 0.75rem 1.125rem;
-      border-radius: 0.5rem;
-      margin: 2rem auto 0;
-      width: 10rem;
+    // &:last-child {
+    //   border: 4px solid #f1f0f3;
+    //   padding: 0.75rem 1.125rem;
+    //   border-radius: 0.5rem;
+    //   margin: 2rem auto 0;
+    //   width: 10rem;
 
-      &:hover {
-        color: $primary-color;
-        border: 4px solid $primary-color;
-      }
-    }
+    //   &:hover {
+    //     color: $primary-color;
+    //     border: 4px solid $primary-color;
+    //   }
+    // }
 
     &:hover {
       color: $primary-color;
