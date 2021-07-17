@@ -322,13 +322,16 @@ a {
 
 header,
 .header {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2))), #170131;
-  background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
+  background: #170131;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 header_navbar,
 .header_navbar {
-  padding: 0 4rem;
+  padding: 0 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -338,7 +341,7 @@ header_navbar,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 4.5rem;
+  min-height: 4.75rem;
   max-width: 67.5rem;
   margin: auto;
 }
@@ -360,7 +363,7 @@ header_navbar-link:last-child,
 }
 
 .mobile-header {
-  height: 9rem;
+  height: 4.5rem;
   background: #170131;
   position: fixed;
   top: 0;
@@ -406,7 +409,6 @@ header_navbar-link:last-child,
       -ms-flex-align: center;
           align-items: center;
   min-height: 4.5rem;
-  margin-top: 4.5rem;
   padding: 0 1rem;
 }
 
@@ -420,7 +422,7 @@ header_navbar-link:last-child,
           flex-direction: column;
   text-align: center;
   width: 100%;
-  height: calc(100vh - 9rem);
+  height: calc(100vh - 4.5rem);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(171, 69, 231, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2))), #170131;
   background: linear-gradient(180deg, rgba(171, 69, 231, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), #170131;
 }
@@ -474,10 +476,18 @@ header_navbar-link:last-child,
   }
 }
 
+@media (max-width: 500px) {
+  .mobile-header_logo {
+    height: auto;
+    width: 200px;
+  }
+}
+
 .hero {
   text-align: center;
   max-width: 60rem;
   margin: 8.75rem auto 6.75rem;
+  padding: 4.5rem 1rem 0;
 }
 
 .hero_title {
@@ -520,15 +530,10 @@ header_navbar-link:last-child,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 6.875rem;
-}
-
-.hero_button {
-  margin-right: 1.25rem;
-}
-
-.hero_button:last-child {
-  margin-right: 0;
+  margin-top: 3.75rem;
+  gap: 1.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .hero_button-link {
@@ -554,7 +559,7 @@ header_navbar-link:last-child,
 .team {
   text-align: center;
   max-width: 60rem;
-  margin: 12rem auto;
+  margin: 6.875rem auto;
 }
 
 .team_title {
@@ -564,7 +569,7 @@ header_navbar-link:last-child,
   font-family: "Montserrat", "Open Sans", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   letter-spacing: -0.04em;
-  margin-bottom: 8.25rem;
+  margin-bottom: 5.25rem;
 }
 
 .team_title--period {

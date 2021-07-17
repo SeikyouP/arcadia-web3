@@ -1,13 +1,17 @@
 header,
 .header {
-  background: $body-color;
+  background: $body-color-alt;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
 
   &_navbar {
-    padding: 0 4rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 4.5rem;
+    min-height: 4.75rem;
     max-width: 67.5rem;
     margin: auto;
   }
@@ -28,7 +32,7 @@ header,
 
 // Mobile Header
 .mobile-header {
-  height: 9rem;
+  height: 4.5rem;
   background: $body-color-alt;
   position: fixed;
   top: 0;
@@ -57,7 +61,6 @@ header,
     width: 100%;
     align-items: center;
     min-height: 4.5rem;
-    margin-top: 4.5rem;
     padding: 0 1rem;
   }
 
@@ -66,7 +69,7 @@ header,
     flex-direction: column;
     text-align: center;
     width: 100%;
-    height: calc(100vh - 9rem);
+    height: calc(100vh - 4.5rem);
     background: $body-color;
   }
 
@@ -119,5 +122,14 @@ header,
 
   .mobile-header {
     display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-header {
+    &_logo {
+      height: auto;
+      width: 200px;
+    }
   }
 }

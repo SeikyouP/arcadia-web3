@@ -1,7 +1,7 @@
 .team {
   text-align: center;
   max-width: 60rem;
-  margin: 12rem auto;
+  margin: 6.875rem auto;
 
   &_title {
     font-weight: 700;
@@ -10,7 +10,7 @@
     font-family: $primary-font-stack;
     text-transform: uppercase;
     letter-spacing: -0.04em;
-    margin-bottom: 8.25rem;
+    margin-bottom: 5.25rem;
 
     &--period {
       @include span-color;
