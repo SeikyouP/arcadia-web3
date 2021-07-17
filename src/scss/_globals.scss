@@ -5,26 +5,27 @@
 }
 
 html {
-  font-family: $default-font-stack;
+  font-family: $primary-font-stack;
+  scroll-behavior: smooth;
 }
 
 body {
   background: $body-color;
   color: $secondary-color;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
-.container {
-  max-width: $container-width;
+.container-1080 {
+  max-width: $container-width-1080;
   margin: auto;
+  padding: 0 1rem;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: $container-width;
+.container-960 {
+  max-width: $container-width-960;
   margin: auto;
+  padding: 0 1rem;
 }
 
 h1,
@@ -32,8 +33,21 @@ h2,
 h3,
 p {
   line-height: 2rem;
+  letter-spacing: -0.02em;
 }
 
 a {
   text-decoration: none;
+  letter-spacing: -0.02em;
+  color: $secondary-color;
+}
+
+@mixin span-color {
+  color: $primary-color;
+}
+
+@media (max-width: 31.25rem) {
+  .next-line {
+    display: block;
+  }
 }

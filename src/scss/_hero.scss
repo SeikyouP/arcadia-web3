@@ -1,105 +1,70 @@
 .hero {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-  padding: 8.25rem 0 0;
-  min-height: 29.5rem;
+  max-width: 60rem;
+  margin: 8.75rem auto 6.75rem;
 
   &_title {
-    color: $primary-color;
-    font-size: 3.5rem;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 2.125rem;
+    line-height: 2.5rem;
     font-family: $primary-font-stack;
     text-transform: uppercase;
-    line-height: 3.5rem;
-  }
+    letter-spacing: -0.04em;
+    margin-bottom: 1.25rem;
 
-  &_sub-title {
-    color: $secondary-color;
-    font-size: 2rem;
-    font-weight: 600;
-    font-family: $primary-font-stack;
-    text-transform: uppercase;
-    line-height: 2.75rem;
+    &--period {
+      color: $primary-color;
+    }
   }
 
   &_description {
-    font-size: 1.25rem;
-    color: $secondary-color;
-    font-family: $tertiary-font-stack;
-    width: 38.375rem;
-    margin: auto;
-    padding: 2rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: $primary-font-stack;
+    letter-spacing: -0.02em;
+
+    &--mission {
+      margin-bottom: 6rem;
+    }
+
+    &--token {
+      margin-bottom: 4.5rem;
+    }
   }
 
   &_buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 6.875rem;
   }
 
   &_button {
-    background: $secondary-color;
-    border-radius: 0.3125rem;
-    transition: background 0.25s ease;
+    margin-right: 1.25rem;
 
     &:last-child {
       margin-right: 0;
     }
-
-    &:hover {
-      background: $primary-color;
-    }
   }
 
   &_button-link {
+    background: $primary-color;
+    line-height: 2.875rem;
     display: inline-block;
-    font-weight: 600;
-    font-size: 1.25rem;
-    font-family: $secondary-font-stack;
-    width: 212px;
-    line-height: 56px;
-    color: $primary-color;
-    transition: color 0.25s ease;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    font-weight: 700;
+    font-size: 0.875rem;
 
-    &:hover {
+    &--left {
+      background: $primary-color;
       color: $secondary-color;
     }
-  }
 
-  &_stats {
-    color: $secondary-color;
-    font-weight: 700;
-    min-height: 4.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 2rem;
-  }
-
-  &_data {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 0;
-    margin-right: 2.875rem;
-    font-weight: 600;
-    font-family: $primary-font-stack;
-    letter-spacing: -0.02rem;
-
-    &:last-child {
-      margin-right: 0rem;
-    }
-
-    h3 {
-      font-size: 1.5rem;
-      line-height: 1.75rem;
-    }
-
-    span {
-      font-size: 1rem;
-      line-height: 1.5rem;
-      font-family: $secondary-font-stack;
+    &--right {
+      background: $secondary-color;
+      color: $primary-color;
     }
   }
 }
