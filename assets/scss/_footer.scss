@@ -1,0 +1,6 @@
+@use 'mixins' as *;
+.footer {
+  margin-top: auto;
+  background-color: var(--footer-bg);
+  min-height: 17.5rem;
+}

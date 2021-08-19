@@ -1,0 +1,38 @@
+:root {
+  // Main Colors
+  --primary-color: #2f2838;
+  --secondary-color: #ab45e7;
+  --tertiary-color: #f1f0f3;
+  --main-gradient: linear-gradient(108.08deg, rgba(171, 69, 231, 0.95) 0%, rgba(103, 41, 139, 0.855) 100%),
+    url(../assets/img/hero_bg.png);
+
+  --alt-gradient: linear-gradient(91.68deg, #a340dd 0%, #6552c6 100%);
+  --text-gradient: linear-gradient(91.81deg, #7879f1 0%, #bc6aec 100.25%);
+
+  // Test Colors
+  --text-light: var(--tertiary-color);
+  --text-dark: var(--primary-color);
+  --text-white: white;
+
+  // Section Background Colors
+  --body-bg: var(--primary-color);
+  --header-bg: var(--primary-color);
+  --hero-bg: var(--main-gradient);
+  --hero-text: var(--text-white);
+  --hero-button: var(--text-light);
+  --hero-button-text: var(--text-gradient);
+  --signup-title: var(--alt-gradient);
+  --signup-form: rgba(47, 40, 56, 0.8);
+  --signup-input: var(--tertiary-color);
+  --contact-bg: var(--primary-color);
+  --contact-button: var(--secondary-color);
+  --footer-bg: var(--primary-color);
+
+  // Container Width
+  --header-height: 7.5rem;
+  --container-width: 87.5rem;
+  --footer-height: 17.5rem;
+
+  // Font Family Stacks
+  --primary-font: 'Roboto', 'Open Sans', Arial, Helvetica, sans-serif;
+}

@@ -1,0 +1,430 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --primary-color: #2f2838;
+  --secondary-color: #ab45e7;
+  --tertiary-color: #f1f0f3;
+  --main-gradient: linear-gradient(108.08deg, rgba(171, 69, 231, 0.95) 0%, rgba(103, 41, 139, 0.855) 100%),
+    url(../assets/img/hero_bg.png);
+  --alt-gradient: linear-gradient(91.68deg, #a340dd 0%, #6552c6 100%);
+  --text-gradient: linear-gradient(91.81deg, #7879f1 0%, #bc6aec 100.25%);
+  --text-light: var(--tertiary-color);
+  --text-dark: var(--primary-color);
+  --text-white: white;
+  --body-bg: var(--primary-color);
+  --header-bg: var(--primary-color);
+  --hero-bg: var(--main-gradient);
+  --hero-text: var(--text-white);
+  --hero-button: var(--text-light);
+  --hero-button-text: var(--text-gradient);
+  --signup-title: var(--alt-gradient);
+  --signup-form: rgba(47, 40, 56, 0.8);
+  --signup-input: var(--tertiary-color);
+  --contact-bg: var(--primary-color);
+  --contact-button: var(--secondary-color);
+  --footer-bg: var(--primary-color);
+  --header-height: 7.5rem;
+  --container-width: 87.5rem;
+  --footer-height: 17.5rem;
+  --primary-font: "Roboto", "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: var(--primary-font);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body.disable-scroll {
+  overflow: hidden;
+}
+
+section:first-child {
+  padding: var(--header-height) 0;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.span-color {
+  color: var(--text-light);
+}
+
+.span-bold {
+  font-weight: 700;
+}
+
+.header {
+  background-color: var(--header-bg);
+  min-height: var(--header-height);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+.header__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: var(--header-height);
+}
+@media (max-width: 36rem) {
+  .header__logo {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.home {
+  background: url(/assets/img/hero_bg.png) no-repeat center center/cover;
+}
+.home__content {
+  padding: 8.75rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: var(--hero-text);
+}
+.home__content > * + * {
+  margin-left: 3.75rem;
+}
+.home__info {
+  width: 50%;
+}
+.home__title {
+  font-weight: 900;
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.home__description {
+  font-size: 36px;
+  margin-bottom: 2rem;
+  line-height: 3.25rem;
+}
+.home__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  background-color: var(--hero-button);
+  height: 4.25rem;
+  width: 21.25rem;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  border: none;
+}
+.home__button a {
+  background-image: var(--hero-button-text);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+  line-height: 4.25rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.home__button:hover, .home__button:focus {
+  background-color: var(--text-dark);
+}
+.home__form-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 50%;
+}
+.home__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 27.5rem;
+  height: 35.5rem;
+  background-color: var(--signup-form);
+  border-radius: 1.25rem;
+}
+.home__form-content {
+  padding: 4.75rem 2.5rem 2.75rem;
+}
+.home__form-title {
+  position: absolute;
+  top: calc(-3.25rem / 2);
+  left: 0;
+  right: 0;
+  width: 19.5rem;
+  height: 3.25rem;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  background-image: var(--signup-title);
+  font-size: 1.25rem;
+}
+.home__form-group label {
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+.home__form-group input {
+  width: 100%;
+  height: 3.75rem;
+  background: var(--signup-input);
+  -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  font-size: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+.home__form-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  background-color: var(--hero-button);
+  height: 4.25rem;
+  width: 21.25rem;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  border: none;
+  border-radius: 0.5rem;
+  width: 100%;
+}
+.home__form-button a {
+  background-image: var(--hero-button-text);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+  line-height: 4.25rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.home__form-button:hover, .home__form-button:focus {
+  background-color: var(--text-dark);
+}
+
+.footer {
+  margin-top: auto;
+  background-color: var(--footer-bg);
+  min-height: 17.5rem;
+}

@@ -1,0 +1,165 @@
+// Buttons
+@mixin button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  background-color: var(--hero-button);
+  height: 4.25rem;
+  width: 21.25rem;
+  transition: 0.25s ease-in-out;
+  border: none;
+
+  a {
+    background-image: var(--hero-button-text);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.75rem;
+    line-height: 4.25rem;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: var(--text-dark);
+  }
+}
+
+// Menu Toggle Mixin
+@mixin menu-toggle {
+  .menu-toggle {
+    display: none;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+
+    @media (max-width: 47.9375rem) {
+      display: inline-block;
+    }
+  }
+
+  .menu-toggle:hover {
+    opacity: 0.7;
+  }
+  .menu-toggle.is-active:hover {
+    opacity: 0.7;
+  }
+  .menu-toggle.is-active .menu-toggle-inner,
+  .menu-toggle.is-active .menu-toggle-inner::before,
+  .menu-toggle.is-active .menu-toggle-inner::after {
+    background-color: var(--text-dark);
+  }
+
+  .menu-toggle-box {
+    width: 32px;
+    height: 24px;
+    display: inline-block;
+    position: relative;
+  }
+
+  .menu-toggle-inner {
+    display: block;
+    top: 50%;
+    margin-top: -2px;
+  }
+
+  .menu-toggle-inner,
+  .menu-toggle-inner::before,
+  .menu-toggle-inner::after {
+    width: 32px;
+    height: 3px;
+    background-color: var(--text-dark);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease;
+  }
+
+  .menu-toggle-inner::before,
+  .menu-toggle-inner::after {
+    content: '';
+    display: block;
+  }
+
+  .menu-toggle-inner::before {
+    top: -8px;
+  }
+
+  .menu-toggle-inner::after {
+    bottom: -8px;
+  }
+
+  // Squeeze
+  .menu-toggle--squeeze .menu-toggle-inner {
+    transition-duration: 0.075s;
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .menu-toggle--squeeze .menu-toggle-inner::before {
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease;
+  }
+
+  .menu-toggle--squeeze .menu-toggle-inner::after {
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  .menu-toggle--squeeze.is-active .menu-toggle-inner {
+    transform: rotate(45deg);
+    transition-delay: 0.12s;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  .menu-toggle--squeeze.is-active .menu-toggle-inner::before {
+    top: 0;
+    opacity: 0;
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease;
+  }
+
+  .menu-toggle--squeeze.is-active .menu-toggle-inner::after {
+    bottom: 0;
+    transform: rotate(-90deg);
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+}
+
+// Breakpoints
+$breakpoints-up: (
+  xs: 0,
+  small: 36rem,
+  medium: 48rem,
+  large: 62rem,
+  xlarge: 75rem,
+  xxlarge: 87.5rem,
+);
+
+$breakpoints-down: (
+  xs: 0,
+  sm: 35.9375em,
+  md: 47.9375em,
+  lg: 61.9375em,
+  xl: 74.9375em,
+  xxl: 87.4375em,
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size )) {
+    @content;
+  }
+}
+
+@mixin breakpoint-down($size) {
+  @media (max-width: map-get($breakpoints-up, $size )) {
+    @content;
+  }
+}
