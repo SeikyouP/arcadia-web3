@@ -154,8 +154,10 @@ table {
   --signup-form: rgba(47, 40, 56, 0.8);
   --signup-input: var(--tertiary-color);
   --contact-bg: var(--primary-color);
+  --contact-text: var(--text-white);
   --contact-button: var(--secondary-color);
   --footer-bg: var(--primary-color);
+  --footer-text: var(--text-white);
   --header-height: 7.5rem;
   --container-width: 87.5rem;
   --footer-height: 17.5rem;
@@ -422,9 +424,150 @@ img {
 .home__form-button:hover, .home__form-button:focus {
   background-color: var(--text-dark);
 }
+.home__form-button a {
+  font-size: 1.5rem;
+}
+
+.contact {
+  background-color: var(--contact-bg);
+  color: var(--contact-text);
+}
+.contact__content {
+  padding: 6.25rem 12rem 4.25rem;
+}
+.contact__title {
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.contact__form-half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact__form-half > * {
+  width: 100%;
+}
+.contact__form-half * + * {
+  margin-left: 2rem;
+}
+.contact__form-group input,
+.contact__form-group textarea {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  background-color: var(--contact-bg);
+  border: 1px solid var(--text-light);
+  border-radius: 0.5rem;
+}
+.contact__form-group input[placeholder],
+.contact__form-group textarea[placeholder] {
+  font-family: var(--primary-font);
+  color: var(--contact-text);
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+.contact__form-group textarea {
+  resize: none;
+  min-height: 8.75rem;
+}
+.contact__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  background-color: var(--hero-button);
+  height: 4.25rem;
+  width: 21.25rem;
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+  border: none;
+  background-color: var(--contact-button);
+  border-radius: 0.5rem;
+  width: 17rem;
+  height: 3.25rem;
+  font-weight: 900;
+  font-size: 1.25rem;
+  color: var(--text-light);
+  font-family: var(--primary-font);
+  float: right;
+}
+.contact__button a {
+  background-image: var(--hero-button-text);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 1.75rem;
+  line-height: 4.25rem;
+  text-align: center;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.contact__button:hover, .contact__button:focus {
+  background-color: var(--text-dark);
+}
+.contact__button:hover, .contact__button:focus {
+  background-color: var(--tertiary-color);
+  color: var(--contact-button);
+}
 
 .footer {
   margin-top: auto;
   background-color: var(--footer-bg);
   min-height: 17.5rem;
+  color: var(--footer-text);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer__social-icons > * + * {
+  margin-left: 2.5rem;
+}
+.footer__social-icon {
+  font-size: 2rem;
+  padding: 1.25rem 0 2.25rem;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+.footer__social-icon:hover, .footer__social-icon:focus {
+  color: var(--secondary-color);
+}
+.footer__copyright {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-light);
+  text-align: center;
 }

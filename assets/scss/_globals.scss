@@ -19,6 +19,7 @@ body {
   font-family: var(--primary-font);
   display: flex;
   flex-direction: column;
+  // min-height: 100vh;
 
   &.disable-scroll {
     overflow: hidden;

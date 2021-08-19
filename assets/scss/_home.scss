@@ -95,5 +95,9 @@
     @include button;
     border-radius: 0.5rem;
     width: 100%;
+
+    a {
+      font-size: 1.5rem;
+    }
   }
 }
