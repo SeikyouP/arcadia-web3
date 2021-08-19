@@ -4,25 +4,52 @@
   color: var(--contact-text);
 
   &__content {
-    padding: 6.25rem 12rem 4.25rem;
+    padding: 6.25rem 0 4.25rem;
+    max-width: 48rem;
+    margin: auto;
   }
 
   &__title {
     font-weight: 700;
-    font-size: 48px;
+    font-size: 3rem;
     text-align: center;
     margin-bottom: 2.5rem;
+
+    @include breakpoint-down(xlarge) {
+      font-size: 2.75rem;
+    }
+
+    @include breakpoint-down(small) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
   }
 
   &__form-half {
     display: flex;
 
+    @include breakpoint-down(small) {
+      display: block;
+    }
+
     & > * {
       width: 100%;
+
+      @include breakpoint-down(small) {
+        width: auto;
+      }
     }
 
     & * + * {
       margin-left: 2rem;
+
+      @include breakpoint-down(small) {
+        margin: 0;
+      }
     }
   }
 
@@ -53,18 +80,30 @@
     @include button;
     background-color: var(--contact-button);
     border-radius: 0.5rem;
-    width: 17rem;
+    max-width: 17rem;
     height: 3.25rem;
-    font-weight: 900;
-    font-size: 1.25rem;
-    color: var(--text-light);
-    font-family: var(--primary-font);
-    float: right;
+    align-self: flex-end;
+
+    @include breakpoint-down(small) {
+      align-self: center;
+      width: 100%;
+    }
 
     &:hover,
     &:focus {
       background-color: var(--tertiary-color);
-      color: var(--contact-button);
+    }
+
+    a {
+      color: var(--text-light);
+      font-family: var(--primary-font);
+      font-weight: 900;
+      font-size: 1.25rem;
+
+      &:hover,
+      &:focus {
+        color: var(--contact-button);
+      }
     }
   }
 }
