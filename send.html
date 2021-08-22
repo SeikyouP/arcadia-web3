@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- METADATA -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FAVICONS -->
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/img/favicons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png" />
+
+    <!-- CSS.GG ICONS -->
+    <link href="https://unpkg.com/css.gg/icons/all.css" rel="stylesheet" />
+
+    <!-- FONT AWESOME ICONS -->
+    <link href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" rel="stylesheet" />
+
+    <!-- TITLE -->
+    <title>Arcadia Web3 Technologies</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+      form.validate {
+        padding: 0 !important;
+      }
+
+      #mc_embed_signup {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+        width: 27.5rem;
+        min-height: 35.5rem;
+        background-color: var(--signup-form);
+        border-radius: 1.25rem;
+        border: 2px solid rgba(241, 240, 243, 0.3);
+      }
+
+      @media (max-width: 61.9375em) {
+        #mc_embed_signup {
+          width: 100%;
+          margin: auto;
+        }
+      }
+
+      #mc-form-title {
+        position: absolute;
+        top: calc(-3.25rem / 2);
+        left: 0;
+        right: 0;
+        width: 19.5rem;
+        height: 3.25rem;
+        font-weight: 900;
+        border-radius: 0.5rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        margin: auto;
+        background-image: var(--signup-title);
+        font-size: 1.125rem;
+        border: 2px solid rgba(241, 240, 243, 0.3);
+        color: var(--signup-text);
+      }
+      @media (max-width: 35.9375em) {
+        #mc-form-title {
+          position: static;
+          margin-bottom: 2rem;
+          width: 100%;
+          font-size: 1rem;
+        }
+      }
+
+      #mc_embed_signup_scroll {
+        padding: 4.75rem 2.5rem 2.75rem;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .mc-field-group {
+        width: 100% !important;
+      }
+
+      .mc-field-group label {
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 1.25rem;
+        flex-grow: 1;
+        color: var(--text-white);
+      }
+
+      @media (max-width: 35.9375em) {
+        .mc-field-group label {
+          font-size: 1.125rem;
+        }
+      }
+
+      .mc-field-group input {
+        width: 100%;
+        height: 3.75rem;
+        background: var(--signup-input);
+        -webkit-box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 0.5rem !important;
+        font-size: 1.5rem;
+        margin-bottom: 2.25rem;
+      }
+
+      @media (max-width: 35.9375em) {
+        .mc-field-group input {
+          font-size: 1.25rem;
+        }
+      }
+
+      input.button {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        border-radius: 1rem !important;
+        -webkit-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+        color: var(--secondary-color) !important;
+        background-color: var(--hero-button) !important;
+        height: 4.25rem !important;
+        width: 21.25rem !important;
+        font-size: 1.75rem !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+      }
+
+      input.button:hover,
+      input.button:focus {
+        background-color: var(--text-dark) !important;
+      }
+
+      @media (max-width: 61.9375em) {
+        .input-wrap {
+          -ms-flex-item-align: center;
+          align-self: center;
+          max-width: 19.5rem;
+        }
+
+        input.button {
+          font-size: 1.5rem;
+        }
+      }
+
+      @media (max-width: 35.9375em) {
+        input.button {
+          width: 100% !important;
+        }
+      }
+
+      .mce_inline_error {
+        margin: 0 !important;
+        margin: 0.25rem 0 !important;
+      }
+
+      /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+                  	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+  </head>
+
+  <body style="background: url(/assets/img/hero_bg.png) no-repeat center center/cover">
+    <!-- Start of Header Section -->
+    <header class="header">
+      <div class="header__inner container">
+        <div class="header__logo">
+          <img src="assets/img/header_logo.svg" alt="header_logo" />
+        </div>
+      </div>
+    </header>
+    <!-- End of Header Section -->
+
+    <main
+      class="main-content"
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: calc(100vh - 17.5rem);
+        flex-direction: column;
+        font-family: 'Roboto';
+        color: white;
+      "
+    >
+      <h1 style="font-size: 3rem; text-transform: uppercase; font-weight: 900; line-height: 1.5">Thank You!</h1>
+      <p style="font-size: 2rem">Your form has been submitted!</p>
+
+      <div class="home__button" style="margin-top: 2rem">
+        <a href="/">Go Back</a>
+      </div>
+    </main>
+
+    <!-- Start of Footer Section -->
+    <footer class="footer">
+      <div class="footer__inner container">
+        <div class="footer__content">
+          <img class="footer__logo" src="assets/img/footer_logo.svg" alt="footer_logo" />
+        </div>
+        <div class="footer__social-icons">
+          <a class="footer__social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
+          <a class="footer__social-icon" href="#"><i class="fab fa-twitter"></i></a>
+          <a class="footer__social-icon" href="#"><i class="fab fa-linkedin"></i></a>
+          <a class="footer__social-icon" href="#"><i class="fab fa-instagram"></i></a>
+          <a class="footer__social-icon" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer__copyright">© 2021 Arcadia Web3 Technologies. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- End of Footer Section -->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+
+    <!-- JS Plugins  -->
+    <script src="assets/js/ajax-contact.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

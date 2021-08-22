@@ -151,6 +151,7 @@ table {
   --hero-button: var(--text-light);
   --hero-button-text: var(--text-gradient);
   --signup-title: var(--alt-gradient);
+  --signup-text: var(--text-light);
   --signup-form: rgba(47, 40, 56, 0.8);
   --signup-input: var(--tertiary-color);
   --contact-bg: var(--primary-color);
@@ -249,7 +250,7 @@ img {
           align-items: center;
   height: var(--header-height);
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .header__logo {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -261,7 +262,7 @@ img {
   background: url(/assets/img/hero_bg.png) no-repeat center center/cover;
 }
 .home__content {
-  padding: 8.75rem 0 0;
+  padding: var(--header-height) 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,7 +274,7 @@ img {
           justify-content: space-between;
   color: var(--hero-text);
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -287,12 +288,12 @@ img {
 .home__content > * + * {
   margin-left: 4.25rem;
 }
-@media (max-width: 75rem) {
+@media (max-width: 74.9375em) {
   .home__content > * + * {
     margin-left: 1rem;
   }
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__content > * + * {
     margin: 0;
     margin-top: 7.5rem;
@@ -308,9 +309,10 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__info {
     width: 100%;
+    margin-bottom: var(--header-height);
   }
 }
 .home__title {
@@ -319,12 +321,12 @@ img {
   text-transform: uppercase;
   margin-bottom: 2rem;
 }
-@media (max-width: 75rem) {
+@media (max-width: 74.9375em) {
   .home__title {
     font-size: 2.75rem;
   }
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__title {
     text-align: center;
     font-size: 2.5rem;
@@ -335,18 +337,17 @@ img {
   margin-bottom: 2rem;
   line-height: 3.25rem;
 }
-@media (max-width: 75rem) {
+@media (max-width: 74.9375em) {
   .home__description {
     font-size: 1.75rem;
   }
 }
-@media (max-width: 48rem) {
+@media (max-width: 47.9375em) {
   .home__description {
-    text-align: center;
     font-size: 1.5rem;
   }
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__description {
     text-align: center;
     font-size: 1.25rem;
@@ -385,11 +386,10 @@ img {
 .home__button:hover, .home__button:focus {
   background-color: var(--text-dark);
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__button {
     -ms-flex-item-align: center;
         align-self: center;
-    width: 100%;
   }
 }
 .home__form-wrap {
@@ -404,7 +404,7 @@ img {
           flex-grow: 1;
   width: 50%;
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__form-wrap {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -427,7 +427,7 @@ img {
   border-radius: 1.25rem;
   border: 2px solid rgba(241, 240, 243, 0.3);
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__form {
     width: 100%;
     margin: auto;
@@ -450,6 +450,7 @@ img {
   right: 0;
   width: 19.5rem;
   height: 3.25rem;
+  font-weight: 900;
   border-radius: 0.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -464,8 +465,9 @@ img {
   background-image: var(--signup-title);
   font-size: 1.125rem;
   border: 2px solid rgba(241, 240, 243, 0.3);
+  color: var(--signup-text);
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__form-title {
     position: static;
     margin-bottom: 2rem;
@@ -479,7 +481,7 @@ img {
   font-weight: 500;
   font-size: 1.25rem;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__form-group label {
     font-size: 1.125rem;
   }
@@ -494,7 +496,7 @@ img {
   font-size: 1.5rem;
   margin-bottom: 2.25rem;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .home__form-group input {
     font-size: 1.25rem;
   }
@@ -534,7 +536,7 @@ img {
 .home__form-button:hover, .home__form-button:focus {
   background-color: var(--text-dark);
 }
-@media (max-width: 62rem) {
+@media (max-width: 61.9375em) {
   .home__form-button {
     -ms-flex-item-align: center;
         align-self: center;
@@ -560,12 +562,12 @@ img {
   text-align: center;
   margin-bottom: 2.5rem;
 }
-@media (max-width: 75rem) {
+@media (max-width: 74.9375em) {
   .contact__title {
     font-size: 2.75rem;
   }
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .contact__title {
     font-size: 2.5rem;
   }
@@ -584,7 +586,7 @@ img {
   display: -ms-flexbox;
   display: flex;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .contact__form-half {
     display: block;
   }
@@ -592,7 +594,7 @@ img {
 .contact__form-half > * {
   width: 100%;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .contact__form-half > * {
     width: auto;
   }
@@ -600,7 +602,7 @@ img {
 .contact__form-half * + * {
   margin-left: 2rem;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .contact__form-half * + * {
     margin: 0;
   }
@@ -647,6 +649,10 @@ img {
   height: 3.25rem;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  color: var(--text-light);
+  font-family: var(--primary-font);
+  font-weight: 900;
+  font-size: 1.25rem;
 }
 .contact__button a {
   background-image: var(--hero-button-text);
@@ -663,24 +669,16 @@ img {
 .contact__button:hover, .contact__button:focus {
   background-color: var(--text-dark);
 }
-@media (max-width: 36rem) {
+.contact__button:hover, .contact__button:focus {
+  background-color: var(--tertiary-color);
+  color: var(--contact-button);
+}
+@media (max-width: 35.9375em) {
   .contact__button {
     -ms-flex-item-align: center;
         align-self: center;
     width: 100%;
   }
-}
-.contact__button:hover, .contact__button:focus {
-  background-color: var(--tertiary-color);
-}
-.contact__button a {
-  color: var(--text-light);
-  font-family: var(--primary-font);
-  font-weight: 900;
-  font-size: 1.25rem;
-}
-.contact__button a:hover, .contact__button a:focus {
-  color: var(--contact-button);
 }
 
 .footer {
@@ -721,7 +719,7 @@ img {
 .footer__social-icons > * + * {
   margin-left: 2.5rem;
 }
-@media (max-width: 36rem) {
+@media (max-width: 35.9375em) {
   .footer__social-icons > * + * {
     margin-left: 1.5rem;
   }
